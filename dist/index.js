@@ -4966,8 +4966,12 @@ var glob = __webpack_require__(90);
 var io = __webpack_require__(436);
 
 // CONCATENATED MODULE: ./src/async-function.ts
+// import { Octokit } from '@octokit/core'
+// import { retry } from '@octokit/plugin-retry'
 const AsyncFunction = Object.getPrototypeOf(async () => null).constructor;
 function callAsyncFunction(args, source) {
+    console.log('args', args);
+    console.log('source', source);
     const fn = new AsyncFunction(...Object.keys(args), source);
     return fn(...Object.values(args));
 }
